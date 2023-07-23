@@ -27,7 +27,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -38,7 +37,9 @@ section#login {
 
     transition: width .3s, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
+/* DIca: Sempre por TODOS OS TRANSFORMS E TRANSITIONS por último na lista de css do elemento para que as transições e animações não quebrem em alguns dispositivos */
 
 section#login > div#imagem {
     display: block;
@@ -64,15 +65,39 @@ div#formulario > p {
 }
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     width: 100%;
     display: block;
     height:40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 div.campo > label {
 display: none;
 }
+div.campo > i {
+    color:white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+div.campo > input {
+    background-color: #9e2881;
+    font-size: 1em;
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    width: calc(100% - 45px); /* primeiro deixar o background color preto no div.campo >i depois inserir uma largura neles 40px, e depois diminuir 100% de 40 e ir testando até encaixar. 
+    TransformY: pra cima negativo pra baixo positivo
+    TransformX: Pra direita negativo e esquerda positivo */
+    transform: translateY(-13px);
+    
+}
+div.campo > input:focus-within {
+background-color: white;
+}
+/* a fórmula acima é para quando se por o cursor no campo de email e senha, ele fique imediatamente com fundo branco */
 
 form > input[type=submit] {
     display: block;

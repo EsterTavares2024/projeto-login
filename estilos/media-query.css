@@ -3,6 +3,7 @@
 /* Versão Tablet: 768px até 992px */
 /* Versão Desktop: 992px até 1200px */
 
+/* CONFIGURAÇÃO PARA TABLET */
 @media screen and (min-width:768px) and (max-width: 992px) {
     body {
         background-image: linear-gradient(to top, rgb(248, 105, 105), #5f2c82);
@@ -10,6 +11,7 @@
     
     section#login {
         width: 80vw;
+        height: 280px;
     }
     section#login > div#imagem {
         float: left;
@@ -22,7 +24,7 @@
     }
 }
 
-/* configuração para telas grandes 992px desktop e tv */
+/* configuração para telas grandes 992px DESKTOP e tv */
 @media screen and (min-width: 992px) {
     body {
         background-image: linear-gradient(to top, rgb(248, 105, 105), #5f2c82);
@@ -30,6 +32,7 @@
     
     section#login {
         width: 950px;
+        height: 350px;
     } 
     section#login > div#imagem {
         float: right;
@@ -44,7 +47,8 @@
         font-size: 2em;
     }
     div#formulario > p {
-        font-size: 1.2em;
+        font-size: 1em;
+        margin: 20px 0px;
 
     }
 }
