@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* Css para telas pequenas e celular (até 768px) */
 /* Paleta de cores
 Verde: #49A09D
 Lilás: #5f2c82*/
@@ -32,6 +33,8 @@ section#login {
     height: 500px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease;
 }
 
 section#login >div#imagem {
@@ -48,4 +51,7 @@ section#login > div#formulario {
     top: 50%;
     left: 50%;
     transform: translate (-50%, -50%);
--- Overflow: hidden = essa função faz com que tudo que esteja fora da borda do login no centro da tela fique escondido */
+-- Overflow: hidden = essa função faz com que tudo que esteja fora da borda do login no centro da tela fique escondido
+-- Para fazer com que a imagem de pintura demore 0.3s para mudar de posição de tamanho de tela de celular pra tablet e fazer com que essa transição seja suave, usamos as configs abaixo:
+    transition: width 0.3s, height 0.3s;
+    transition-timing-function: ease; */
